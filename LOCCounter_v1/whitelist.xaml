@@ -1,0 +1,35 @@
+﻿<Window x:Class="LOCCounter_v1.whitelist"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Whitelist" Height="629" Width="579">
+    <Grid>
+    	<TextBlock HorizontalAlignment="Left" Margin="20,86.96,0,0" TextWrapping="Wrap" Text="Lines of code will only be counted from files with the following extensions. Most major file extensions are included, however you may add any file extension missing." VerticalAlignment="Top" Height="46.96" Width="525.587" FontSize="16"/>
+    	<GroupBox Header="Whitelist" Margin="20,137.92,27.303,166.04">
+    		<StackPanel Margin="-16,0,0,0">
+    			<StackPanel Orientation="Horizontal" Margin="33,11,8,0">
+    				<TextBlock TextWrapping="Wrap" Text="Scripts" Width="125.194" Margin="7,0,0,0"/>
+    				<TextBlock TextWrapping="Wrap" Text="Programs" Width="125.194" Margin="-8,0,0,0"/>
+    				<TextBlock TextWrapping="Wrap" Text="Others" Width="125.194" Margin="4,0,0,0"/>
+    				<TextBlock TextWrapping="Wrap" Text="Custom" Width="125.194" Margin="-6,0,0,0"/>
+    			</StackPanel>
+    			<StackPanel Orientation="Horizontal" Width="503.697" Margin="8,-19,-8,0" HorizontalAlignment="Center" Height="250.96">
+    				<TextBox x:Name="tbxScripts" TextWrapping="Wrap" Width="104.582" Margin="17,25.48,0,8" Height="217.48" IsReadOnly="True" VerticalScrollBarVisibility="Auto" />
+    				<TextBox x:Name="tbxPrograms" TextWrapping="Wrap" Width="104.582" Margin="17,25.48,0,8" Height="217.48" IsReadOnly="True" VerticalScrollBarVisibility="Auto" />
+    				<TextBox x:Name="tbxOthers" TextWrapping="Wrap" Width="104.582" Margin="17,25.48,0,8" Height="217.48" IsReadOnly="True" VerticalScrollBarVisibility="Auto" />
+    				<TextBox x:Name="tbxCustom" TextWrapping="Wrap" Width="104.582" Margin="17,25.48,0,8" Height="217.48" VerticalScrollBarVisibility="Auto" AcceptsReturn="False" IsReadOnly="True" />
+    			</StackPanel>
+    		</StackPanel>
+    	</GroupBox>
+    	<Button x:Name="btnSave" Content="Save" HorizontalAlignment="Right" Margin="0,0,27.303,20" VerticalAlignment="Bottom" Width="85" Height="33" Click="btnSave_Click" />
+    	<GroupBox Header="Add Custom Extension" Margin="20,0,17.413,72.04" VerticalAlignment="Bottom" Height="81.96">
+    		<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+    			<TextBox x:Name="tbxAdd" TextWrapping="Wrap" Height="22.96" Width="126.553" Margin="16,0,0,0"/>
+    			<Button x:Name="btnAdd" Content="Add" Width="75" Margin="25,0,0,0" Height="36.96" Click="btnAdd_Click" />
+    			<TextBlock x:Name="tbxResult" TextWrapping="Wrap" Margin="65,0,0,0" Height="17.96"/>
+    		</StackPanel>
+    	</GroupBox>
+    	<TextBlock x:Name="tbxSaveResult" HorizontalAlignment="Right" Margin="0,0,145.5,28.52" TextWrapping="Wrap" VerticalAlignment="Bottom" RenderTransformOrigin="0.436,-0.125" Width="94.46" Height="14.96"/>
+    	<Image Height="66.04" Margin="45,8,56,0" VerticalAlignment="Top" Source="whitelist.png" HorizontalAlignment="Center"/>
+        
+    </Grid>
+</Window>

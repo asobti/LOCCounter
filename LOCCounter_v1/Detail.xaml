@@ -1,0 +1,32 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:am="http://schemas.amcharts.com/charts/wpf/2009/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="LOCCounter_v1.Detail"
+        Title="Code Breakup" Height="548" Width="705">
+    <Grid>
+        <!-- Chart & Code -->
+        <Grid Grid.Column="0" Margin="0,0,-81,-69" d:LayoutOverrides="GridBox">
+            <Grid.RowDefinitions>
+            	<RowDefinition />
+            	<RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <am:PieChart x:Name="pieChart1"            	        
+            	        HoverBrightness="50"            	                	        
+            	        BalloonForeground="Black"
+            	        HorizontalContentAlignment="Center"
+            	        Margin="74.5,149,8,23">
+                <am:PieChart.Legend>
+                    <am:Legend Position="Right" Width="250" MaxColumns="1" 
+            			VerticalAlignment="Center"
+            			HorizontalContentAlignment="Left"/>
+                </am:PieChart.Legend>
+                <am:PieChart.Content>
+                    <TextBlock Margin="0,0,0,0" FontSize="14"><Bold><Run Text="Code Distribution Across Files"/></Bold></TextBlock>
+                </am:PieChart.Content>
+            </am:PieChart>
+            <Image Height="66.04" Margin="110,20,198,0" VerticalAlignment="Top" Source="codebreakup.png"/>
+        </Grid>
+        <!-- End Chart & Code -->
+    </Grid>
+</Window>
